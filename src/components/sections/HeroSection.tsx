@@ -2,15 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Target, Users, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
-
 export const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroImage})`
+    }} />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-secondary/90" />
@@ -42,30 +39,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-2">
-              <Target className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-bold">10,000+</h3>
-            <p className="text-white/80">Students Guided</p>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-2">
-              <Users className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-bold">500+</h3>
-            <p className="text-white/80">Expert Mentors</p>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-2">
-              <BookOpen className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-bold">95%</h3>
-            <p className="text-white/80">Success Rate</p>
-          </div>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
